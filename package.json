@@ -1,0 +1,39 @@
+{
+	"name": "curt-codex",
+	"version": "1.0.0",
+	"description": "Convert OpenAI Codex CLI session rollout files to .curt conversation files, and .curt files to Codex rollout JSONL (native input for hermes sessions import and OpenClaw sessions import)",
+	"license": "MIT",
+	"type": "module",
+	"engines": {
+		"node": ">=22.5"
+	},
+	"bin": {
+		"curt-codex": "dist/cli.js"
+	},
+	"main": "dist/codex.js",
+	"types": "dist/codex.d.ts",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsc",
+		"test": "vitest run",
+		"prepack": "npm run build"
+	},
+	"dependencies": {
+		"curt-format": "^1.2.0"
+	},
+	"devDependencies": {
+		"@types/node": "^24.19.2",
+		"typescript": "^5.9.3",
+		"vitest": "^3.2.7"
+	},
+	"keywords": [
+		"curt",
+		"codex",
+		"openai",
+		"converter",
+		"transcript",
+		"rollout"
+	]
+}

@@ -1,0 +1,54 @@
+{
+	"curt": "curtis-conversation",
+	"version": 1,
+	"conversation": {
+		"id": "11111111-2222-4333-8444-555555555555",
+		"title": "Synthetic prompt for fixture session B, the only user turn.",
+		"createdAt": 1793563201000,
+		"updatedAt": 1793563203000,
+		"messages": [
+			{
+				"id": "11111111-2222-4333-8444-555555555555-1",
+				"role": "user",
+				"content": "Synthetic prompt for fixture session B, the only user turn.",
+				"timestamp": 1793563201000
+			},
+			{
+				"id": "11111111-2222-4333-8444-555555555555-2",
+				"role": "assistant",
+				"content": "Synthetic session B answer.",
+				"timestamp": 1793563203000,
+				"model": "synthetic-model-b",
+				"tokens": {
+					"inputTokens": 100,
+					"cachedInputTokens": 0,
+					"cacheWriteInputTokens": 0,
+					"outputTokens": 20,
+					"reasoningOutputTokens": 0,
+					"totalTokens": 120,
+					"modelContextWindow": 258400
+				}
+			}
+		],
+		"codex": {
+			"originator": "codex_exec",
+			"cliVersion": "0.146.0",
+			"source": "exec",
+			"modelProvider": "synthetic-provider"
+		},
+		"model": "synthetic-model-b",
+		"codexTokens": {
+			"inputTokens": 100,
+			"cachedInputTokens": 0,
+			"cacheWriteInputTokens": 0,
+			"outputTokens": 20,
+			"reasoningOutputTokens": 0,
+			"totalTokens": 120,
+			"modelContextWindow": 258400
+		}
+	},
+	"generator": "curt-codex@1.0.0",
+	"extensions": [
+		"usage-metadata"
+	]
+}

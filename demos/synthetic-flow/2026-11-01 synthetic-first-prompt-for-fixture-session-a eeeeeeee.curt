@@ -1,0 +1,123 @@
+{
+	"curt": "curtis-conversation",
+	"version": 1,
+	"conversation": {
+		"id": "aaaaaaaa-bbbb-4ccc-8ddd-eeeeeeeeeeee",
+		"title": "Synthetic first prompt for fixture session A.",
+		"createdAt": 1793559601000,
+		"updatedAt": 1793559613000,
+		"messages": [
+			{
+				"id": "aaaaaaaa-bbbb-4ccc-8ddd-eeeeeeeeeeee-1",
+				"role": "user",
+				"content": "Synthetic first prompt for fixture session A.",
+				"timestamp": 1793559601000
+			},
+			{
+				"id": "aaaaaaaa-bbbb-4ccc-8ddd-eeeeeeeeeeee-2",
+				"role": "assistant",
+				"content": "",
+				"timestamp": 1793559603000,
+				"thinking": "Synthetic reasoning trace part one.\n\nSynthetic reasoning trace part two.",
+				"toolCalls": [
+					{
+						"id": "call_syn1",
+						"name": "synthetic_tool",
+						"arguments": {
+							"path": "synthetic.txt"
+						}
+					}
+				],
+				"model": "synthetic-model-a"
+			},
+			{
+				"id": "aaaaaaaa-bbbb-4ccc-8ddd-eeeeeeeeeeee-3",
+				"role": "tool",
+				"content": "{\"output\":\"synthetic tool output body\",\"exit_code\":0}",
+				"timestamp": 1793559604000,
+				"toolCallId": "call_syn1"
+			},
+			{
+				"id": "aaaaaaaa-bbbb-4ccc-8ddd-eeeeeeeeeeee-4",
+				"role": "assistant",
+				"content": "Synthetic answer one from fixture session A.",
+				"timestamp": 1793559605000,
+				"model": "synthetic-model-a",
+				"tokens": {
+					"inputTokens": 1200,
+					"cachedInputTokens": 0,
+					"cacheWriteInputTokens": 0,
+					"outputTokens": 90,
+					"reasoningOutputTokens": 40,
+					"totalTokens": 1330,
+					"modelContextWindow": 258400
+				}
+			},
+			{
+				"id": "aaaaaaaa-bbbb-4ccc-8ddd-eeeeeeeeeeee-5",
+				"role": "user",
+				"content": "Synthetic second prompt for fixture session A.",
+				"timestamp": 1793559610000
+			},
+			{
+				"id": "aaaaaaaa-bbbb-4ccc-8ddd-eeeeeeeeeeee-6",
+				"role": "assistant",
+				"content": "",
+				"timestamp": 1793559611000,
+				"toolCalls": [
+					{
+						"id": "call_syn_aborted",
+						"name": "synthetic_tool",
+						"arguments": {
+							"path": "gone.txt"
+						}
+					}
+				],
+				"model": "synthetic-model-a"
+			},
+			{
+				"id": "aaaaaaaa-bbbb-4ccc-8ddd-eeeeeeeeeeee-7",
+				"role": "assistant",
+				"content": "Synthetic final answer.",
+				"timestamp": 1793559612000,
+				"model": "synthetic-model-a",
+				"tokens": {
+					"inputTokens": 800,
+					"cachedInputTokens": 0,
+					"cacheWriteInputTokens": 0,
+					"outputTokens": 110,
+					"reasoningOutputTokens": 0,
+					"totalTokens": 910,
+					"modelContextWindow": 258400
+				}
+			},
+			{
+				"id": "aaaaaaaa-bbbb-4ccc-8ddd-eeeeeeeeeeee-8",
+				"role": "tool",
+				"content": "orphan synthetic output",
+				"timestamp": 1793559613000,
+				"toolCallId": "call_syn_orphan"
+			}
+		],
+		"codex": {
+			"originator": "codex_exec",
+			"cliVersion": "0.146.0",
+			"source": "exec",
+			"modelProvider": "synthetic-provider"
+		},
+		"model": "synthetic-model-a",
+		"codexTokens": {
+			"inputTokens": 2000,
+			"cachedInputTokens": 0,
+			"cacheWriteInputTokens": 0,
+			"outputTokens": 200,
+			"reasoningOutputTokens": 0,
+			"totalTokens": 2200,
+			"modelContextWindow": 258400
+		}
+	},
+	"generator": "curt-codex@1.0.0",
+	"extensions": [
+		"usage-metadata"
+	]
+}
